@@ -12,7 +12,7 @@ const common = {
   media: {
     small: "365px",
     medium: "765px",
-    large: "1200px",
+    large: "1600px",
   },
   borderRadius: "8px",
 };

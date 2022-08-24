@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Wrapper from "../components/common/wrapper/Wrapper";
 import Countries from "../components/countries/Countries";
 import DropDown from "../components/form/dropDown/DropDown";
 import Search from "../components/search/Search";
@@ -19,10 +20,10 @@ export default function CountriesPage({ countries }) {
   const onFilterChange = (value) => setFilterInput(value);
 
   return (
-    <>
+    <Wrapper>
       <Search onInputChange={onInputChange} />
       <DropDown dataSource={REGION_FILTER} onFilterChange={onFilterChange} />
       <Countries countries={filteredCountries} />
-    </>
+    </Wrapper>
   );
 }
