@@ -4,6 +4,8 @@ export const Wrapper = styled.header`
   padding: 1em;
   display: flex;
   justify-content: space-between;
+  max-width: ${(props) => props.theme.media.large};
+  margin: 0 auto;
 `;
 
 export const Title = styled.h1`

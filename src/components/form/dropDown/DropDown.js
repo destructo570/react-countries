@@ -7,12 +7,15 @@ import {
   CurrentItem,
   Image,
 } from "./styles";
-import dropIcon from "../../../assets/icons/arrow-drop-down.svg";
+import dropIconLight from "../../../assets/icons/arrow-drop-down-light.svg";
+import dropIconDark from "../../../assets/icons/arrow-drop-down-dark.svg";
+import { getUserThemePref } from "../../../helpers/helper";
 
 export default function DropDown(props) {
   const [value, setValue] = useState("Filter By Region");
   const [clickState, setClickState] = useState(false);
   const { dataSource } = props;
+  const isDark = getUserThemePref();
 
   const onClickHandler = () => {
     setClickState((prev) => !prev);
@@ -33,7 +36,7 @@ export default function DropDown(props) {
         onClick={onClickHandler}
       >
         <CurrentItem>{value}</CurrentItem>
-        <Image src={dropIcon} alt="" />
+        <Image src={isDark ? dropIconLight : dropIconDark} alt="" />
       </Pane>
       {clickState && (
         <DropDownList>

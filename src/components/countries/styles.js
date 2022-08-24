@@ -11,7 +11,7 @@ export const CountryList = styled.ul`
 
   @media (min-width: ${(props) => props.theme.media.small}) {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1em;
+    gap: 3em;
   }
 `;
 

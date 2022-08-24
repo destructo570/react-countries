@@ -7,7 +7,8 @@ export const Container = styled.div`
 export const Pane = styled.div`
   display: flex;
   flex-direction: ${({ direction }) => direction};
-  background-color: ${(props) => props.theme.colors.secondary};
+  background-color: ${(props) => props.theme.colors.primary};
+  box-shadow: ${(props) => props.theme.colors.shadow} 0px 7px 29px 0px;
   border-radius: 8px;
   padding: 0 1em;
   margin: ${({ margin }) => margin};
@@ -18,7 +19,8 @@ export const CurrentItem = styled.p``;
 export const DropDownList = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${(props) => props.theme.colors.secondary};
+  background-color: ${(props) => props.theme.colors.primary};
+  box-shadow: ${(props) => props.theme.colors.shadow} 0px 7px 29px 0px;
   border-radius: 8px;
   padding: 0 1em;
   margin: 0em 1em 1em 1em;

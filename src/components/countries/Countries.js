@@ -20,7 +20,8 @@ export default function Countries({ countries }) {
               <Card.Image
                 src={item.flags.png}
                 borderRadius="8px 8px 0px 0px"
-                maxHeight="150px"
+                maxHeight="200px"
+                maxHeightMd="150px"
               />
               <Card.Pane padding="1em" direction="column">
                 <Card.Title>{item.name.common}</Card.Title>

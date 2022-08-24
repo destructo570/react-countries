@@ -9,17 +9,13 @@ export const Container = styled.div`
   margin: ${({ margin }) => (margin ? margin : 0)};
   background-color: ${(props) => props.theme.colors.primary};
   border-radius: 8px;
+  box-shadow: ${(props) => props.theme.colors.shadow} 0px 7px 29px 0px;
 
   &:hover {
     cursor: pointer;
   }
 
   min-height: ${({ minHeight }) => (minHeight ? minHeight : "")};
-  @media (min-width: ${(props) => props.theme.media.medium}) {
-    max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "")};
-    min-width: ${({ minWidth }) => (minWidth ? minWidth : "")};
-    max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : "")};
-  }
 `;
 
 export const Title = styled.h3`
@@ -51,4 +47,8 @@ export const Image = styled.img`
   border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : "")};
   max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "")};
   object-fit: cover;
+
+  @media (min-width: ${(props) => props.theme.media.medium}) {
+    max-height: ${({ maxHeightMd }) => (maxHeightMd ? maxHeightMd : "")};
+  }
 `;

@@ -10,11 +10,14 @@ import {
   BorderList,
   BorderItem,
 } from "./styles";
-import backIcon from "../../assets/icons/arrow-left-line.svg";
+import arrowLeftLight from "../../assets/icons/arrow-left-light.svg";
+import arrowLeftDark from "../../assets/icons/arrow-left-dark.svg";
 import Button from "../form/button/Button";
 import Card from "../../components/card/Card";
+import { getUserThemePref } from "../../helpers/helper";
 
 export default function CountryDetail({ country, onBorderClick, onBackClick }) {
+  const isDark = getUserThemePref();
   const borderListItems = country?.borderCountries?.map((item) => {
     return (
       <BorderItem key={item} onClick={onBorderClick.bind(null, item)}>
@@ -22,10 +25,14 @@ export default function CountryDetail({ country, onBorderClick, onBackClick }) {
       </BorderItem>
     );
   });
-
+  console.log(isDark);
   return (
     <Container>
-      <Button title="Back" icon={backIcon} onClick={onBackClick} />
+      <Button
+        title="Back"
+        icon={isDark ? arrowLeftLight : arrowLeftDark}
+        onClick={onBackClick}
+      />
       {country && (
         <MainWrapper>
           <Image src={country.flag} alt={country.countryName} />

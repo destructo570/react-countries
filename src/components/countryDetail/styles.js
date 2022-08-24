@@ -45,9 +45,10 @@ export const Title = styled.h1`
 `;
 
 export const Image = styled.img`
-  max-width: 500px;
+  width: 100%;
   @media (min-width: ${(props) => props.theme.media.medium}) {
-    width: 40%;
+    align-self: center;
+    max-width: 400px;
   }
 `;
 
