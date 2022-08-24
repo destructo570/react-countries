@@ -25,7 +25,7 @@ export default function CountryDetail({ country, onBorderClick, onBackClick }) {
       </BorderItem>
     );
   });
-  console.log(isDark);
+
   return (
     <Container>
       <Button
