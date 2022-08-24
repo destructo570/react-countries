@@ -40,7 +40,7 @@ export default function CountryDetail({ country, onBorderClick, onBackClick }) {
             <Title>{country.countryName}</Title>
             <InfoWrapper>
               <Pane direction="column" width="100%">
-                <Card.InfoItem title="Native Name" data={country.nativeName} />
+                <Card.InfoItem title="Native Names" data={country.nativeName} />
                 <Card.InfoItem title="Population" data={country.population} />
                 <Card.InfoItem title="Region" data={country.region} />
                 <Card.InfoItem title="Sub Region" data={country.subregion} />

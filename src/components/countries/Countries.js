@@ -25,7 +25,10 @@ export default function Countries({ countries }) {
               />
               <Card.Pane padding="1em" direction="column">
                 <Card.Title>{item.name.common}</Card.Title>
-                <Card.InfoItem title="Population" data={item.population} />
+                <Card.InfoItem
+                  title="Population"
+                  data={item.population.toLocaleString("en-US")}
+                />
                 <Card.InfoItem title="Region" data={item.region} />
                 <Card.InfoItem title="Capital" data={item.capital} />
               </Card.Pane>

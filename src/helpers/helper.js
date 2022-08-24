@@ -76,12 +76,12 @@ export const getFilteredCountry = (countries, countryName) => {
   });
 
   const country = items[0];
+
   const filteredCountry = {
     countryName: country.name.common,
     flag: country.flags.png,
-    nativeName:
-      country.name.nativeName[Object.keys(country.name.nativeName)[0]].official,
-    population: country.population,
+    nativeName: extractData(country.name.nativeName, "official").toString(),
+    population: country.population.toLocaleString("en-US"),
     region: country.region,
     subregion: country.subregion,
     tld: country.tld?.toString(),
