@@ -13,7 +13,10 @@ export default function CountriesPage() {
 
   useEffect(() => {
     let result = "";
-    if (!searchInput && !filterInput) {
+    if (
+      (!searchInput && !filterInput) ||
+      (!searchInput && filterInput.toLowerCase() === "none")
+    ) {
       result = countries;
     } else {
       result = countries.filter((item) => {
