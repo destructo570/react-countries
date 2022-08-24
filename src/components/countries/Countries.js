@@ -17,7 +17,11 @@ export default function Countries({ countries }) {
             onClick={onCountryClickHandler.bind(null, item)}
           >
             <Card direction="column" minHeight="400px" maxWidth="300px">
-              <Card.Image src={item.flags.png} borderRadius="8px 8px 0px 0px" />
+              <Card.Image
+                src={item.flags.png}
+                borderRadius="8px 8px 0px 0px"
+                maxHeight="150px"
+              />
               <Card.Pane padding="1em" direction="column">
                 <Card.Title>{item.name.common}</Card.Title>
                 <Card.InfoItem title="Population" data={item.population} />

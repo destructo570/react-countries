@@ -49,5 +49,6 @@ export const Pane = styled.div`
 
 export const Image = styled.img`
   border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : "")};
+  max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "")};
   object-fit: cover;
 `;

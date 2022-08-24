@@ -54,10 +54,17 @@ Card.Image = function CardImage({
   children,
   src,
   alt,
+  maxHeight,
   ...restProps
 }) {
   return (
-    <Image src={src} alt={alt} borderRadius={borderRadius} {...restProps}>
+    <Image
+      src={src}
+      alt={alt}
+      borderRadius={borderRadius}
+      maxHeight={maxHeight}
+      {...restProps}
+    >
       {children}
     </Image>
   );
