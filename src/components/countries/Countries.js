@@ -6,7 +6,7 @@ import { Item } from "./styles";
 export default function Countries({ countries }) {
   const navigate = useNavigate();
   const onCountryClickHandler = (country) => {
-    navigate(`/countries/${country.name.common.toLowerCase()}`, country);
+    navigate(`/countries/${country.name.common.toLowerCase()}`);
   };
   return (
     <CountryList>

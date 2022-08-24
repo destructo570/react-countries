@@ -77,6 +77,8 @@ export const getFilteredCountry = (countries, countryName) => {
 
   const country = items[0];
 
+  if (!country) return null;
+
   const filteredCountry = {
     countryName: country.name.common,
     flag: country.flags.png,

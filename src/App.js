@@ -4,6 +4,7 @@ import HeaderWrapper from "./components/header/HeaderWrapper";
 import CountryDetailPage from "./pages/CountryDetailPage";
 import CountriesPage from "./pages/CountriesPage";
 import axios from "axios";
+import { NotFound } from "./components/notFound/NotFound";
 
 function App({ setIsDark }) {
   const [countries, setCountries] = useState(null);
@@ -29,6 +30,7 @@ function App({ setIsDark }) {
           path="/countries/:countryName"
           element={<CountryDetailPage dataSource={countries} />}
         />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </HeaderWrapper>
   );

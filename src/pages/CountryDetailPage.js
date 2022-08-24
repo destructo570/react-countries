@@ -19,8 +19,10 @@ export default function CountryDetailPage({ dataSource }) {
   useEffect(() => {
     if (!dataSource) return;
     const result = getFilteredCountry(dataSource, params.countryName);
+    console.log(result);
+    if (!result) navigate(`../404`);
     setCountry(result);
-  }, [params.countryName, dataSource]);
+  }, [params.countryName, dataSource, navigate]);
 
   return (
     <CountryDetail
