@@ -4,7 +4,7 @@ export const Image = styled.img``;
 
 export const SearchInput = styled.input`
   color: ${(props) => props.theme.colors.textPrimary};
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: transparent;
   border: none;
   outline: none;
   width: 100%;
