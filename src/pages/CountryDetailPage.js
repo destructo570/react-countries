@@ -14,7 +14,7 @@ export default function CountryDetailPage({ dataSource }) {
     navigate(`../countries/${data[0].name.common.toLowerCase()}`);
   };
 
-  const backClickHandler = () => navigate(-1);
+  const backClickHandler = () => navigate("../countries");
 
   useEffect(() => {
     if (!dataSource) return;
