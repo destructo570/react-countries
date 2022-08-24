@@ -3,7 +3,7 @@
 ### See useful information related to all countries like currency, native names, border countries etc.
 We are using REST Countries API for getting data related to a country.
 
-### [Live Preview](react-countries-azure.vercel.app)
+### [Live Preview](https://react-countries-azure.vercel.app/countries)
 
 ## Features
  - Show detailed information about a country, 
