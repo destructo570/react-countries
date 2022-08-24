@@ -16,14 +16,12 @@ function Root() {
     });
   };
   return (
-    <React.StrictMode>
-      <ThemeProvider theme={isDark ? darkTheme : lighTheme}>
-        <Global styles={globalStyles} />
-        <BrowserRouter>
-          <App isDark={isDark} setIsDark={setIsDarkHandler} />
-        </BrowserRouter>
-      </ThemeProvider>
-    </React.StrictMode>
+    <ThemeProvider theme={isDark ? darkTheme : lighTheme}>
+      <Global styles={globalStyles} />
+      <BrowserRouter>
+        <App isDark={isDark} setIsDark={setIsDarkHandler} />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
