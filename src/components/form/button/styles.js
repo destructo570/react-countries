@@ -4,7 +4,7 @@ export const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  max-width: 8%;
+  max-width: 100px;
   font-family: "Open Sans", "sans-serif";
   font-weigth: bold;
   outline: none;
