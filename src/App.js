@@ -1,14 +1,18 @@
 import React from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
 import HeaderWrapper from "./components/header/HeaderWrapper";
-import Home from "./pages/home";
+import CountryDetailPage from "./pages/CountryDetailPage";
+import CountriesPage from "./pages/CountriesPage";
 
-function App() {
+function App({ setIsDark }) {
   return (
-    <div>
-      <HeaderWrapper>
-        <Home />
-      </HeaderWrapper>
-    </div>
+    <HeaderWrapper setIsDark={setIsDark}>
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/countries" />} />
+        <Route path="/countries" element={<CountriesPage />} />
+        <Route path="/countries/:countryName" element={<CountryDetailPage />} />
+      </Routes>
+    </HeaderWrapper>
   );
 }
 

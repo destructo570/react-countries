@@ -8,8 +8,10 @@ const globalStyles = (theme) => css`
   html,
   body {
     background-color: ${theme.colors.background};
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
     font-family: "Open Sans", "Sans-serif";
-    color: white;
+    color: ${theme.colors.textPrimary};
   }
 `;
 

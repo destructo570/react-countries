@@ -3,13 +3,15 @@ import styled from "@emotion/styled/macro";
 export const CountryList = styled.ul`
   list-style: none;
   padding: 0;
+  margin: 1em;
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: ${(props) => props.theme.media.small}) {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
   }
 `;
 

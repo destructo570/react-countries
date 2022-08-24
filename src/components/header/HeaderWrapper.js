@@ -4,7 +4,7 @@ import Header from "./Header";
 export default function HeaderWrapper(props) {
   return (
     <>
-      <Header />
+      <Header setIsDark={props.setIsDark} />
       {props.children}
     </>
   );

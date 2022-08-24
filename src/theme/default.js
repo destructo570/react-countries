@@ -19,15 +19,14 @@ const common = {
 
 export const lighTheme = {
   colors: {
-    teal: "#31C3C0",
-    darkTeal: "#25807E",
-    yellow: "#F0B13D",
-    darkYellow: "#946A1D",
-    gray: "#A8BEC9",
-    darkGray: "#374B56",
-    green: "#1F3540",
-    darkGreen: "#0F212B",
-    black: "#192A32",
+    primary: "hsl(0, 0%, 100%)",
+    secondary: "#dbdbd9",
+    primaryAccent: "#6e6eba",
+    primaryAccentLight: "#7e7ecf",
+    secondaryAccent: "",
+    textPrimary: "hsl(200, 15%, 8%)",
+    textSecondary: "#2C2C38",
+    background: "hsl(0, 0%, 98%)",
   },
   ...common,
 };
@@ -35,7 +34,7 @@ export const lighTheme = {
 export const darkTheme = {
   colors: {
     primary: "hsl(209, 23%, 22%)",
-    secondary: "#FFFFFF",
+    secondary: "hsl(209, 23%, 22%)",
     primaryAccent: "#6e6eba",
     primaryAccentLight: "#7e7ecf",
     secondaryAccent: "",

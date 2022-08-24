@@ -9,9 +9,20 @@ import {
   InfoData,
 } from "./styles";
 
-export default function Card({ children, direction, justify, ...restProps }) {
+export default function Card({
+  children,
+  direction,
+  justify,
+  alignItems,
+  ...restProps
+}) {
   return (
-    <Container direction={direction} justify={justify} {...restProps}>
+    <Container
+      direction={direction}
+      justify={justify}
+      alignItems={alignItems}
+      {...restProps}
+    >
       {children}
     </Container>
   );

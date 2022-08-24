@@ -20,6 +20,7 @@ export default function DropDown(props) {
 
   const onItemClickHandler = (e) => {
     setValue(e.target.innerText);
+    props.onFilterChange(e.target.innerText);
     setClickState((prev) => !prev);
   };
 
