@@ -33,7 +33,7 @@ export const debounce = (fn, delay) => {
   return function () {
     let context = this,
       args = arguments;
-
+    console.log(args);
     clearTimeout(timer);
     timer = setTimeout(() => {
       fn.apply(context, args);
@@ -69,6 +69,8 @@ export const filterCountryList = (countries, searchInput, filterInput) => {
   }
   return result;
 };
+
+export const deboucedFilterCountryList = debounce(filterCountryList, 100);
 
 export const getFilteredCountry = (countries, countryName) => {
   const items = countries.filter((item) => {
